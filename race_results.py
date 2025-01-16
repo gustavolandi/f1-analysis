@@ -1,11 +1,13 @@
 import fastf1 as ff1
 import pandas as pd
 
+season_year = 2024
 race_country = 'Brazil'
+
 session = 'R'
 columns_to_show = ['Position', 'DriverNumber','FullName','Time', 'Status','Points']
 
-session = ff1.get_session(2024, race_country, session)
+session = ff1.get_session(season_year, race_country, session)
 session.load()
 
 race_results = session.results

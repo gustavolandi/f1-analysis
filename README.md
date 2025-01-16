@@ -39,14 +39,21 @@ To deactivate the virtual environment when you're done:
 deactivate
 ```
 
+---
+
 ## Running Race Results Example
 1. Copy the code from the file `race_results.py` [click here](https://github.com/gustavolandi/f1-analysis/blob/main/race_results.py).
 
 2. Create a new notebook and paste the copied code before.
 
-3. Finishing the execution from this script, two files named `race_results.csv` and `race_results_complete.csv` will have been created.
+3. After the execution of this script, two files named `race_results.csv` and `race_results_complete.csv` will be created with the results from 2024 São Paulo Grand Prix. If you want to change the Grand Prix or the Year, change the following variables:
 
-### Example from race_results.csv:
+```python
+season_year = 2024 #year
+race_country = 'Brazil' #Location from the Grand Prix
+```
+
+### Example from `race_results.csv`
 ```csv
 Position,DriverNumber,FullName,Time,Status,Points
 1.0,1,Max Verstappen,0 days 02:06:54.430000,Finished,26.0
@@ -69,7 +76,7 @@ Position,DriverNumber,FullName,Time,Status,Points
 18.0,23,Alexander Albon,,Withdrew,0.0
 19.0,18,Lance Stroll,,Withdrew,0.0
 20.0,27,Nico Hulkenberg,,Disqualified,0.0
-```csv
+```
 
 ---
 

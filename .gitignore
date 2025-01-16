@@ -1,0 +1,44 @@
+# Arquivos de notebook checkpoints
+.ipynb_checkpoints/
+
+# Arquivos gerados por Jupyter
+*.nbconvert/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+.DS_Store
+*.~*
+*.bak
+*.ipynb
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Arquivos de log
+*.log
+
+# Ambientes virtuais
+venv/
+env/
+.env/
+.venv/
+
+# Configurações específicas do JupyterLab
+.lab/
+
+# Arquivos de saída ou grandes (personalize conforme necessário)
+*.csv
+*.tsv
+*.h5
+*.json
+*.db
+*.sqlite
+
+# Diretórios de resultados
+output/
+results/
+data/
