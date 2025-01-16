@@ -13,6 +13,8 @@
 *.bak
 *.ipynb
 
+!runscripts.ipynb
+
 # Arquivos de cache do Python
 __pycache__/
 *.py[cod]

@@ -48,11 +48,13 @@ deactivate
 ---
 
 ## Running Race Results Example
-1. Create a new notebook and run the following script in Jupyter:
+
+### Using notebook runscripts
+1. Open the notebook runscripts.ipynb
+2. Execute the command
 ```bash
 %run race_results.py
 ```
-
 2. After the execution of this script, two files named `race_results.csv` and `race_results_complete.csv` will be created with the results from 2024 São Paulo Grand Prix. If you want to change the Grand Prix or the Year, change the following variables in the file [race_results.py] (https://github.com/gustavolandi/f1-analysis/blob/main/race_results.py).
 
 ```python
