@@ -27,6 +27,13 @@ After activating the virtual environment, install the required dependencies:
 pip install -r requirements.txt
 ```
 
+To run the project in a Jupyter Notebook:
+1. Start Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+2. Open the notebook file (.ipynb) in the Jupyter interface.
+
 To deactivate the virtual environment when you're done:
 ```bash
 deactivate
@@ -36,10 +43,8 @@ deactivate
 
 ## Notice
 
-This project is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.
-
 Please ensure you have Python 3.7 or higher installed before running this project. You can verify your Python version by running:
 ```bash
 python --version
 ```
-If you're using macOS or Linux, you might need to use `python3` instead of `python`.
+If you're using macOS or Linux, you might need to use `python3` instead of `python`. 

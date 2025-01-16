@@ -2,3 +2,4 @@ fastf1
 pandas
 plotly
 kaleido
+notebook
