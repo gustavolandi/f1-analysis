@@ -48,11 +48,12 @@ deactivate
 ---
 
 ## Running Race Results Example
-1. Copy the code from the file `race_results.py` [click here](https://github.com/gustavolandi/f1-analysis/blob/main/race_results.py).
+1. Create a new notebook and run the following script in Jupyter:
+```bash
+%run race_results.py
+```
 
-2. Create a new notebook and paste the copied code before.
-
-3. After the execution of this script, two files named `race_results.csv` and `race_results_complete.csv` will be created with the results from 2024 São Paulo Grand Prix. If you want to change the Grand Prix or the Year, change the following variables:
+2. After the execution of this script, two files named `race_results.csv` and `race_results_complete.csv` will be created with the results from 2024 São Paulo Grand Prix. If you want to change the Grand Prix or the Year, change the following variables in the file [race_results.py] (https://github.com/gustavolandi/f1-analysis/blob/main/race_results.py).
 
 ```python
 season_year = 2024 #year
