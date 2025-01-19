@@ -2,8 +2,8 @@ import matplotlib as mpl
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.collections import LineCollection
-import sys
 import fastf1 as ff1
+import input_args
 
 
 ##############################################################################
@@ -12,18 +12,7 @@ import fastf1 as ff1
 
 colormap = mpl.cm.plasma
 
-args = {}
-for arg in sys.argv[1:]:
-    if '=' in arg:
-        key, value = arg.split('=', 1)
-        args[key] = value
-
-required_args = ['year', 'weekend', 'session']
-missing_args = [arg for arg in required_args if arg not in args]
-
-if missing_args:
-    print(f"Error: The following parameters are necessary - {', '.join(missing_args)}")
-    sys.exit(1)
+args =  input_args.input_args()
 
 year = int(args['year'])
 
@@ -41,7 +30,6 @@ laps = laps.dropna(subset=['LapTime'])
 
 fastest_laps = laps.loc[laps.groupby('Driver')['LapTime'].idxmin()]
 
-# Exibir as informações das voltas mais rápidas
 for _, lap in fastest_laps.iterrows():
 
     telemetry = lap.get_telemetry()
@@ -49,7 +37,7 @@ for _, lap in fastest_laps.iterrows():
     y = telemetry['Y']
     color = telemetry['Speed']
 
-        ##############################################################################
+    ##############################################################################
     # Now, we create a set of line segments so that we can color them
     # individually. This creates the points as a N x 1 x 2 array so that we can
     # stack points  together easily to get the segments. The segments array for
@@ -68,7 +56,6 @@ for _, lap in fastest_laps.iterrows():
     # Adjust margins and turn of axis
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.12)
     ax.axis('off')
-
 
     # After this, we plot the data itself.
     # Create background track line
@@ -92,7 +79,6 @@ for _, lap in fastest_laps.iterrows():
     normlegend = mpl.colors.Normalize(vmin=color.min(), vmax=color.max())
     legend = mpl.colorbar.ColorbarBase(cbaxes, norm=normlegend, cmap=colormap,
                                     orientation="horizontal")
-
 
     # Show the plot
     plt.show()
