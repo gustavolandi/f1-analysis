@@ -1,13 +1,8 @@
-"""Speed visualization on track map
-======================================
-
-(Example provided by @JSEHV on Github)
-"""
 import matplotlib as mpl
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.collections import LineCollection
-
+import sys
 import fastf1 as ff1
 
 
@@ -17,14 +12,24 @@ import fastf1 as ff1
 
 colormap = mpl.cm.plasma
 
-year = 2024
-wknd = 'Brazil'
-ses = 'R'
+args = {}
+for arg in sys.argv[1:]:
+    if '=' in arg:
+        key, value = arg.split('=', 1)
+        args[key] = value
 
+required_args = ['year', 'weekend', 'session']
+missing_args = [arg for arg in required_args if arg not in args]
+
+if missing_args:
+    print(f"Error: The following parameters are necessary - {', '.join(missing_args)}")
+    sys.exit(1)
+
+year = int(args['year'])
 
 ##############################################################################
 # Next, we load the session and select the desired data.
-session = ff1.get_session(year, wknd, ses)
+session = ff1.get_session(year, args['weekend'], args['session'])
 weekend = session.event
 session.load()
 
