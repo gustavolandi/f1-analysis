@@ -105,7 +105,9 @@ Other examples:
 
 ## Filters
 
-### Team
+### 2024
+
+#### Team
 
 | Team            | 
 |-----------------|
@@ -119,7 +121,7 @@ Other examples:
 | Haas F1 Team    |
 | Kick Sauber     |
 
-### DriverNumber and Abbreviation
+#### DriverNumber and Abbreviation
 
 | DriverNumber | Abbreviation |
 |--------------|--------------|
