@@ -71,13 +71,79 @@ If you desire to export in excel or csv, you can use the following parameters:
       excel_file_name='WRITE_YOUR_DESIRED_FILE_NAME'
    For csv:
       export_csv='True'
-      csv_file_name='WRITE_YOUR_DESIRED_FILE_NAME' 
+      csv_file_name='WRITE_YOUR_DESIRED_FILE_NAME'
+
+If you desire to filter results, you can filter them by adding the parameter filter_results with the following values:
+
+   - 'Top' followed by a number between 1 and 20 to get the first n positions. 
+      
+      Example: 'Top10' to get the first 10 positions
+      
+   - 'Podium' to get the first 3 positions
+   - 'Team' to get the results of a team
+      - Add parameter 'team' with the name of the Team 
+   - 'Driver' to get the results of a driver
+      - Add parameter 'driver' with the Driver Abbreviation or Number
 
 In the example, the script is getting data from 2024 São Paulo Grand Prix and saving a file named results_race_excel.xlsx. And it's going to plot the data in the following image:
 
 ![](assets/race_results_example.png)
 
+Other examples:
+```bash
+
+#plot table with results from Qualifying from Ferrari Team
+%run race_results.py year=2024 weekend='Brazil' session='Q' filter_results='Team' team='Ferrari'
+
+#plot table with results from Race from Max Verstappen
+%run race_results.py year=2024 weekend='Brazil' session='R' filter_results='Driver' driver='VER'
+
+#plot table with results from Sprint Race from Lando Norris and export to both csv and excel
+%run race_results.py year=2024 weekend='Brazil' session='S' filter_results='Driver' driver='4' export_csv='True' csv_file_name='results_race_norris' export_excel='True' excel_file_name='results_race_norris'
+```
 ---
+
+## Filters
+
+### Team
+
+| Team            | 
+|-----------------|
+| McLaren         |    
+| Ferrari         | 
+| Red Bull Racing | 
+| Mercedes        |
+| RB              |
+| Williams        |
+| Alpine          |
+| Haas F1 Team    |
+| Kick Sauber     |
+
+### DriverNumber and Abbreviation
+
+| DriverNumber | Abbreviation |
+|--------------|--------------|
+| 1            | VER          |
+| 4            | NOR          |
+| 10           | GAS          |
+| 11           | PER          |
+| 14           | ALO          |
+| 16           | LEC          |
+| 18           | STR          |
+| 22           | TSU          |
+| 23           | ALB          |
+| 24           | ZHO          |
+| 27           | HUL          |
+| 30           | LAW          |
+| 31           | OCO          |
+| 43           | COL          |
+| 44           | HAM          |
+| 50           | BEA          |
+| 55           | SAI          |
+| 63           | RUS          |
+| 77           | BOT          |
+| 81           | PIA          |
+
 
 ## Notice
 

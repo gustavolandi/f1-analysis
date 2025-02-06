@@ -41,6 +41,7 @@ env/
 *.json
 *.db
 *.sqlite
+*.xlsx
 
 # Diretórios de resultados
 output/

@@ -5,3 +5,5 @@ kaleido
 notebook
 matplotlib
 numpy
+openpyxl
+xlsxwriter
