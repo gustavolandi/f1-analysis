@@ -4,6 +4,7 @@ import input_args
 import matplotlib.pyplot as plt
 import re
 import os
+import importlib
 
 
 columns_to_show_race = ['Position','DriverNumber','FullName','TeamName','TotalTime','Time','Status','Points','GridPosition']
@@ -13,7 +14,7 @@ columns_to_show_sprint_qualifying = ['Position','DriverNumber','FullName','TeamN
 columns_to_show_free_practice = ['DriverNumber','FullName','TeamName']
 
 def main():
-
+    importlib.reload(input_args)
     args =  input_args.input_args()
     year = int(args['year'])
     filter_results = '' if 'filter_results' not in args else args['filter_results']  

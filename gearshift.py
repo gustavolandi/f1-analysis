@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import colormaps
 from matplotlib.collections import LineCollection
-import argparse
 
 import fastf1
 import input_args
-
+import importlib
 
 def main():
 
+    importlib.reload(input_args)
     args =  input_args.input_args()
     year = int(args['year'])
 

@@ -102,7 +102,78 @@ Other examples:
 %run race_results.py year=2024 weekend='Brazil' session='S' filter_results='Driver' driver='4' export_csv='True' csv_file_name='results_race_norris' export_excel='True' excel_file_name='results_race_norris'
 ```
 ---
+## Running Fastest Lap Drivers
 
+The script fastest_lap_drivers.py plots the speed of the best lap of the drivers in each part of the circuit. The parameter drivers is optional. If not send, every driver fastest lap is going to be plotted.
+
+```bash
+
+#plot speed of the best lap of Verstappen in 2024 São Paulo Grand Prix Race
+%run fastest_lap_drivers.py year=2024 weekend='Brazil' session='R' drivers=['VER']
+
+#plot speed of the best lap of Hamilton and Verstappen in 2024 Silverstone Grand Prix Race
+%run fastest_lap_drivers.py year=2024 weekend='Silverstone' session='R' drivers=['HAM','VER']
+
+#plot speed of the best lap of all drivers in 2024 Australian Grand Prix Race
+%run fastest_lap_drivers.py year=2024 weekend='Australia' session='R' 
+
+```
+
+In the following image is plotted Verstappen fastest lap speed in 2024 São Paulo Grand Prix
+![](assets/fastest_lap_drivers_ver_brazil_2024.png)
+
+---
+## Running Gearshift
+
+The script gearshift.py plots all the gear change in the fastest lap of the drivers. The parameter drivers is optional. If not send, every driver gear change in fastest lap is going to be plotted.
+
+```bash
+
+#plot gearshift of the best lap of Verstappen in 2024 São Paulo Grand Prix Race
+%run gearshift.py year=2024 weekend='Brazil' session='R' drivers=['VER']
+
+#plot gearshift of the best lap of Hamilton and Verstappen in 2024 Silverstone Grand Prix Race
+%run gearshift.py year=2024 weekend='Silverstone' session='R' drivers=['HAM','VER']
+
+#plot gearshift of the best lap of all drivers in 2024 Australian Grand Prix Race
+%run gearshift.py year=2024 weekend='Australia' session='R' 
+```
+
+In the following image is plotted Verstappen fastest lap gearshift in 2024 São Paulo Grand Prix
+![](assets/gearshift_ver_brazil_2024.png)
+
+---
+## Tyre Strategies
+
+The script tyre_strategies.py plots the tyre strategies for a race
+
+```bash
+
+#plot tyre strategies in 2024 Las Vegas Grand Prix Race
+%run tyre_strategies.py year=2024 weekend='Las Vegas' session='R'
+
+```
+
+In the following image is plotted tyre strategies in 2024 Las Vegas Grand Prix
+![](assets/tyre_strategies_vegas_2024.png)
+
+---
+---
+## Driver Standings HeatMap
+
+The script heatmap.py plots a heatmap with the driver standings
+
+```bash
+
+#plot driver standing for 2023 season
+%run heatmap.py year=2023 
+
+```
+
+In the following image is plotted the driver standings for 2023 Formula 1 Driver Championship
+![](assets/heatmap_driver_standings_2023.png)
+
+---
 ## Filters
 
 ### 2024
